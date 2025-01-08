@@ -95,6 +95,7 @@ struct Video8: VideoTpl {
 
 fileprivate func getSettings(for name: String) -> VideoSettings{
     VideoSettings {
+        Subtitles(name == VideoURLPicker.subtitledVideo ? "subtitles_eng" : "")
         SourceName(name)
         Gravity(.resizeAspectFill)
         TimePublishing()

@@ -26,10 +26,12 @@ struct TimeSlider: View {
     private var sliderTpl: some View{
         HStack {
             Text(formatTime(currentTime))
+                .padding(.leading, 15)
             Slider(value: $currentTime, in: 0...duration, onEditingChanged: onEditingChanged)
                 .disabled(duration == 0 || isSeeking == true)
             Text(formatTime(duration))
-        }.padding()
+                .padding(.trailing, 15)
+        }.padding(5)
          .background(RoundedRectangle(cornerRadius: 50).fill(.gray.opacity(0.75)))
          .padding(.horizontal)
     }

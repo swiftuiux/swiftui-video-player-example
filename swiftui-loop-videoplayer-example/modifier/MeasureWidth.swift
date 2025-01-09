@@ -2,7 +2,7 @@
 //  MeasureWidth.swift
 //  swiftui-loop-videoplayer-example
 //
-//  Created by Igor  on 13.09.24.
+//  Created by Igor Shelopaev on 13.09.24.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  ResponsiveStack.swift
 //  swiftui-loop-videoplayer-example
 //
-//  Created by Igor  on 29.08.24.
+//  Created by Igor Shelopaev on 29.08.24.
 //
 
 import SwiftUI

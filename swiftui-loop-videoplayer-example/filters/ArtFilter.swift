@@ -2,7 +2,7 @@
 //  ArtFilter.swift
 //  swiftui-loop-videoplayer-example
 //
-//  Created by Igor  on 13.08.24.
+//  Created by Igor Shelopaev on 13.08.24.
 //
 
 import Foundation
@@ -62,4 +62,4 @@ class ArtFilter: CIFilter {
 
         return finalImage
     }
-    }
+}

@@ -2,7 +2,7 @@
 //  PlayButton.swift
 //  swiftui-loop-videoplayer-example
 //
-//  Created by Igor  on 12.09.24.
+//  Created by Igor Shelopaev on 12.09.24.
 //
 
 import SwiftUI

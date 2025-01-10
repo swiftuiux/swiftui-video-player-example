@@ -85,6 +85,10 @@ struct Video8: VideoTpl {
         ToolbarItem(placement: .navigation) {
             VideoURLPicker(selectedVideoURL: $selectedVideoURL)
                 .onChange(of: selectedVideoURL) { newURL in
+                    let embedded = VideoURLPicker.embeddedSubtitledVideo == newURL
+                    // Enable embedded Subtitles
+                    playbackCommand = .subtitles(embedded ? "en" : nil)
+                  
                     handleVideoSelectionChange(newURL)
                 }
         }
@@ -95,11 +99,11 @@ struct Video8: VideoTpl {
 
 fileprivate func getSettings(for name: String) -> VideoSettings{
     VideoSettings {
-        Subtitles(name == VideoURLPicker.subtitledVideo ? "subtitles_eng" : "")
+        Subtitles(name == VideoURLPicker.subtitlesFromFileVideo ? "subtitles_eng" : "")
         SourceName(name)
         Gravity(.resizeAspectFill)
         TimePublishing()
         Loop()
-        Mute()
+        //Mute()
     }
 }

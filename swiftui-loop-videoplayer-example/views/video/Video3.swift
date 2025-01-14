@@ -48,7 +48,7 @@ struct Video3 : VideoTpl{
                 }
             }
             errorTpl
-        } .background(Color("app_blue"))
+        }.background(Color("app_blue"))
     }
     
     @ViewBuilder

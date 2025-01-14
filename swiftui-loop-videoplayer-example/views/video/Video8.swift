@@ -34,19 +34,16 @@ struct Video8: VideoTpl {
     // MARK: - Life circle
     
     var body: some View {
-        VStack {
             ZStack {
                 ExtVideoPlayer(settings: $settings, command: $playbackCommand)
                     .accessibilityIdentifier(Self.videoPlayerIdentifier)
                     .onPlayerTimeChange(perform: onPlayerTimeChange)
                     .onPlayerEventChange(perform: onPlayerEventChange)
             }
-            .ignoresSafeArea() 
-            .background(Color("app_blue"))
+            .ignoresSafeArea()
             .overlay(timeScaleTpl, alignment: .bottom)
-        }
-        .toolbar { toolbarTpl }
-        .onAppear { handleVideoSelectionChange(selectedVideoURL) }
+            .toolbar { toolbarTpl }
+            .onAppear { handleVideoSelectionChange(selectedVideoURL) }
     }
     
     private var timeScaleTpl : some View{
@@ -104,6 +101,6 @@ fileprivate func getSettings(for name: String) -> VideoSettings{
         Gravity(.resizeAspectFill)
         TimePublishing()
         Loop()
-        //Mute()
+        Mute()
     }
 }

@@ -24,7 +24,6 @@ struct ContentView: View {
                 Spacer()
             }
             .background(.quaternary)
-            .ignoresSafeArea()
             .navigationDestination(for: String.self) { name in
                 getDestination(for: name)
             }

@@ -51,5 +51,6 @@ struct Video11 : VideoTpl{
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .accessibilityIdentifier(Video11.loopCounterIdentifier)
             }.ignoresSafeArea()
+            .background(Color("app_blue"))
     }
 }

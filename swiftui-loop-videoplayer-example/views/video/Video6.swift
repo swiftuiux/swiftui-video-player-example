@@ -30,6 +30,7 @@ struct Video6: VideoTpl {
             SourceName(videoName)
             Loop()
             Mute()
+            EnableVector()
             Gravity(.resizeAspectFill)
         }
         self._settings = State(initialValue: settings)

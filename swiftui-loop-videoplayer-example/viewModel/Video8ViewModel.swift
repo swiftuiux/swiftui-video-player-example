@@ -18,14 +18,17 @@ final class Video8ViewModel : ObservableObject{
         
         guard let videoURL = URL(string: url) else { return }
         
-        let asset = AVAsset(url: videoURL)
-        
         duration = 0
         currentTime = 0
         
-        Task { @MainActor in
+        Task {
+        
+            let asset = AVAsset(url: videoURL)
+
             if let duration = try? await asset.load(.duration){
-                self.duration = duration.seconds
+                await MainActor.run{
+                    self.duration = duration.seconds
+                }
             }
         }
     }

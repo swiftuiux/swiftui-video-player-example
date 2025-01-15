@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78048F8D2D2EDF2E00B4A348 /* subtitles_eng.vtt in Resources */ = {isa = PBXBuildFile; fileRef = 78048F8C2D2EDF2E00B4A348 /* subtitles_eng.vtt */; };
+		7804B5FF2D3826E0000D6136 /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 7804B5FE2D3826E0000D6136 /* swiftui-loop-videoplayer */; };
 		7810A3D52A7CE3570032340D /* tip_video_swiftui.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7810A3D42A7CE3570032340D /* tip_video_swiftui.gif */; };
 		7816ADFC2C91A140008179BA /* swiftui_video_player.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7816ADFB2C91A140008179BA /* swiftui_video_player.gif */; };
 		7816ADFF2C9337EA008179BA /* ButtonsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7816ADFE2C9337EA008179BA /* ButtonsBuilder.swift */; };
@@ -163,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7804B5FF2D3826E0000D6136 /* swiftui-loop-videoplayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +412,7 @@
 			);
 			name = VideoPlayerUITests;
 			packageProductDependencies = (
+				7804B5FE2D3826E0000D6136 /* swiftui-loop-videoplayer */,
 			);
 			productName = VideoPlayerUITests;
 			productReference = 7876EDD52C80AFBA0084DC8C /* VideoPlayerUITests.xctest */;
@@ -868,6 +871,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7804B5FE2D3826E0000D6136 /* swiftui-loop-videoplayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78A2F66B2C95EA1300D2BF05 /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;
+			productName = "swiftui-loop-videoplayer";
+		};
 		78A2F66C2C95EA2200D2BF05 /* swiftui-loop-videoplayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 78A2F66B2C95EA1300D2BF05 /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;

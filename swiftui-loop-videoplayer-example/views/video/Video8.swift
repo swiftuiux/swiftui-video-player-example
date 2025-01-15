@@ -81,6 +81,7 @@ struct Video8: VideoTpl {
     private var toolbarTpl: some ToolbarContent {
         ToolbarItem(placement: .navigation) {
             VideoURLPicker(selectedVideoURL: $selectedVideoURL)
+                .disabled(viewModel.isNotReady)
                 .onChange(of: selectedVideoURL) { newURL in
                     let embedded = VideoURLPicker.embeddedSubtitledVideo == newURL
                     // Enable embedded Subtitles

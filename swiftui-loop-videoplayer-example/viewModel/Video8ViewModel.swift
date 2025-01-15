@@ -14,6 +14,10 @@ final class Video8ViewModel : ObservableObject{
     
     @Published var currentTime: Double = 0
     
+    var isNotReady : Bool{
+        duration == 0
+    }
+    
     public func getDuration(from url: String) {
         
         guard let videoURL = URL(string: url) else { return }

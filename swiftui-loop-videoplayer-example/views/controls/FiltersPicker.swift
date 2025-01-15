@@ -62,7 +62,6 @@ fileprivate let filters = [
     ("CIPixellate", [kCIInputScaleKey: 8.0]),
     ("CICrystallize", [kCIInputRadiusKey: 20, kCIInputCenterKey: CIVector(x: 150, y: 150)]),
     ("CIGloom", [kCIInputRadiusKey: 10, kCIInputIntensityKey: 0.75]),
-    ("CIHoleDistortion", [kCIInputRadiusKey: 150, kCIInputCenterKey: CIVector(x: 150, y: 150)]),
     ("CIKaleidoscope", ["inputCount": 6, "inputCenter": CIVector(x: 150, y: 150)]),
     ("CIZoomBlur", [kCIInputAmountKey: 20, kCIInputCenterKey: CIVector(x: 150, y: 150)])
 ]

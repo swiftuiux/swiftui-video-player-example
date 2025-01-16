@@ -10,6 +10,8 @@ import swiftui_loop_videoplayer
 
 struct Video11 : VideoTpl{
     
+    @State public var playbackCommand: PlaybackCommand = .idle
+    
     static public let videoPrefix : String = "Video11"
     
     static public var videoPlayerIdentifier : String {
@@ -26,14 +28,7 @@ struct Video11 : VideoTpl{
     
     var body: some View{
             ZStack{
-                ExtVideoPlayer{
-                    VideoSettings{
-                        SourceName(fileName)
-                        Ext("mp4")
-                        Gravity(.resizeAspectFill)
-                        Loop()
-                    }
-                }
+                ExtVideoPlayer(settings: .constant(getSettings()), command: $playbackCommand)
                 .onPlayerEventChange { events in
                     let count = events.filter {
                         if case .currentItemChanged(_) = $0 {
@@ -45,6 +40,10 @@ struct Video11 : VideoTpl{
                     loopCount += count
                 }
                 .accessibilityIdentifier(Video11.videoPlayerIdentifier)
+                .task{
+                      try? await Task.sleep(for: .seconds(0.5))
+                      playbackCommand = .play
+                }
                 Text("Loop count \(loopCount)")
                     .padding()
                     .background(Color.blue)
@@ -52,5 +51,17 @@ struct Video11 : VideoTpl{
                     .accessibilityIdentifier(Video11.loopCounterIdentifier)
             }.ignoresSafeArea()
             .background(Color("app_blue"))
+    }
+}
+
+// MARK: - Fileprivate
+
+fileprivate func getSettings() -> VideoSettings{
+    VideoSettings{
+        SourceName("swipe")
+        Ext("mp4")
+        Gravity(.resizeAspectFill)
+        Loop()
+        NotAutoPlay()
     }
 }

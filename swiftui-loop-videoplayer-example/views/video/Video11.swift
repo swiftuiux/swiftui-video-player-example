@@ -24,12 +24,13 @@ struct Video11 : VideoTpl{
     
     let fileName : String = "swipe"
     
-    @State var loopCount : Int = 0
+    @State var loopCount : Int = 1
     
     var body: some View{
             ZStack{
                 ExtVideoPlayer(settings: .constant(getSettings()), command: $playbackCommand)
                 .onPlayerEventChange { events in
+                    print(events)
                     let count = events.filter {
                         if case .currentItemChanged(_) = $0 {
                             return true

@@ -40,10 +40,16 @@ struct Video8: VideoTpl {
                     .onPlayerTimeChange(perform: onPlayerTimeChange)
                     .onPlayerEventChange(perform: onPlayerEventChange)
             }
+            .onChange(of: viewModel.duration){ value in
+                if value > 0 {
+                    playbackCommand = .play
+                }
+            }
             .ignoresSafeArea()
             .overlay(timeScaleTpl, alignment: .bottom)
             .toolbar { toolbarTpl }
             .onAppear { handleVideoSelectionChange(selectedVideoURL) }
+
     }
     
     private var timeScaleTpl : some View{
@@ -73,6 +79,7 @@ struct Video8: VideoTpl {
     }
     
     private func handleVideoSelectionChange(_ newURL: String) {
+        playbackCommand = .pause
         viewModel.getDuration(from: newURL)
         settings = getSettings(for: newURL)
     }
@@ -101,6 +108,7 @@ fileprivate func getSettings(for name: String) -> VideoSettings{
         SourceName(name)
         Gravity(.resizeAspectFill)
         TimePublishing()
+        NotAutoPlay()
         Mute()
     }
 }

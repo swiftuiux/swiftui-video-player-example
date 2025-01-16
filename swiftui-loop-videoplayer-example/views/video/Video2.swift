@@ -20,9 +20,6 @@ struct Video2 : VideoTpl{
                 VideoSettings{
                     SourceName("swipe")
                     Loop()
-                    ErrorGroup{
-                        EFontSize(27)
-                    }
                 }
             }.accessibilityIdentifier(Self.videoPlayerIdentifier)
         }.background(Color("app_blue"))

@@ -33,7 +33,6 @@ struct Video3 : VideoTpl{
             ExtVideoPlayer{
                 VideoSettings{
                     SourceName(Video3.sourceName)
-                    ErrorWidgetOff()
                     Loop()
                 }
             }

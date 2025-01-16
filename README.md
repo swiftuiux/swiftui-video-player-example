@@ -3,7 +3,7 @@
 ## [Video player API](https://github.com/swiftuiux/swiftui-loop-videoplayer)
 
 ## Disclaimer on Video Sources like YouTube
-Videos hosted on platforms like YouTube cannot be used directly due to restrictions in their terms of service. Always ensure the video URL is compliant with copyright laws and platform policies. 
+Videos hosted on platforms like YouTube cannot be used directly due to restrictions in their terms of service.
   
 ![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/swiftui_video_player.gif) 
 

@@ -40,16 +40,11 @@ struct Video8: VideoTpl {
                     .onPlayerTimeChange(perform: onPlayerTimeChange)
                     .onPlayerEventChange(perform: onPlayerEventChange)
             }
-            .onChange(of: viewModel.duration){ value in
-                if value > 0 {
-                    playbackCommand = .play
-                }
-            }
+            .onChange(of: viewModel.duration, perform: onDurationChange)
             .ignoresSafeArea()
             .overlay(timeScaleTpl, alignment: .bottom)
             .toolbar { toolbarTpl }
             .onAppear { handleVideoSelectionChange(selectedVideoURL) }
-
     }
     
     private var timeScaleTpl : some View{
@@ -70,6 +65,12 @@ struct Video8: VideoTpl {
                 }
                 isSeeking = false
             }
+        }
+    }
+    
+    private func onDurationChange(_ duration : Double){
+        if duration > 0 {
+            playbackCommand = .play
         }
     }
     

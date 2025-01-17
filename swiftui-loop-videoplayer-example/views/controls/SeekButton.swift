@@ -30,7 +30,7 @@ struct SeekButton : View {
     
     private func updatePlayingState(for command: PlaybackCommand) {
         switch command {
-        case .seek(_):
+        case .seek(_,_):
             isSeeking = true
         default:
             break // No action needed for other commands

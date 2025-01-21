@@ -7,13 +7,13 @@ Videos hosted on platforms like YouTube cannot be used directly due to restricti
   
 ![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/swiftui_video_player.gif) 
 
-![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/vector.gif) 
-
 ![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/PiP_support.gif) 
 
 ![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/rotate.gif) 
 
 ![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/rotate_around_edge.gif) 
+
+![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/vector.gif) 
   
 ![The concept](https://github.com/swiftuiux/swiftui-video-player-example/blob/main/swiftui-loop-videoplayer-example/img/swiftui.gif)
   

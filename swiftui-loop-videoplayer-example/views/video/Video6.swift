@@ -8,6 +8,7 @@ import swiftui_loop_videoplayer
 import SwiftUI
 import AVFoundation
 import CoreImage
+import Combine
 
 struct Video6: VideoTpl {
     
@@ -34,7 +35,13 @@ struct Video6: VideoTpl {
             Gravity(.resizeAspectFill)
         }
         self._settings = State(initialValue: settings)
+        
+        setupThrottle()
     }
+    
+    // Combine properties for throttling
+    @State private var boundsChangeSubject = PassthroughSubject<CGRect, Never>()
+    private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Life circle
     
@@ -44,12 +51,12 @@ struct Video6: VideoTpl {
                     settings : $settings,
                     command: $playbackCommand
                 )
+                .onPlayerEventChange(perform: onPlayerEventChange)
                 .frame(minHeight: vStackWidth)
                 .accessibilityIdentifier(Self.videoPlayerIdentifier)
                 .mask{
                     RoundedRectangle(cornerRadius: 25)
                 }
-                
                 playbackControlsTpl
                 VectorToggle(playbackCommand: $playbackCommand)
                 FiltersPicker(playbackCommand: $playbackCommand)
@@ -75,6 +82,27 @@ struct Video6: VideoTpl {
             }
             .padding(.vertical, 8)
             .background(RoundedRectangle(cornerRadius: 50).fill(.ultraThinMaterial))
+    }
+    
+    private func onPlayerEventChange(events: [PlayerEvent]){
+        events.forEach {
+            if case .boundsChanged(let rect) = $0{
+                print(rect, "rect")
+                // Send boundsChanged event to the throttle mechanism
+                boundsChangeSubject.send(rect)
+            }
+        }
+    }
+    
+    // MARK: - Throttle Setup
+    
+    private mutating func setupThrottle() {
+        boundsChangeSubject
+            .throttle(for: .milliseconds(500), scheduler: DispatchQueue.main, latest: true)
+            .sink { rect in
+                print(rect)
+            }
+            .store(in: &cancellables)
     }
 }
 

@@ -105,5 +105,3 @@ struct Video6: VideoTpl {
             .store(in: &cancellables)
     }
 }
-
-

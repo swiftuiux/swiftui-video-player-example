@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -77,7 +77,7 @@
 		78AF7BFD2A52AA5D0028E9E3 /* swipe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78AF7BFC2A52AA5D0028E9E3 /* swipe.mp4 */; };
 		78AF7C072A52BFBB0028E9E3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 78AF7C062A52BFBB0028E9E3 /* README.md */; };
 		78B42EF32C529785005E2367 /* macos.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78B42EF22C529785005E2367 /* macos.gif */; };
-		78C75C652D3FD3B5003E299A /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 78C75C642D3FD3B5003E299A /* swiftui-loop-videoplayer */; };
+		78C75C6A2D3FFD24003E299A /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 78C75C692D3FFD24003E299A /* swiftui-loop-videoplayer */; };
 		78D7B6732C6E1CE1002833B3 /* Video8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6722C6E1CE1002833B3 /* Video8.swift */; };
 		78D7B6752C6E2C13002833B3 /* Video1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6742C6E2C13002833B3 /* Video1.swift */; };
 		78F87B3F2C6668F0007E26CD /* Video6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B3E2C6668F0007E26CD /* Video6.swift */; };
@@ -170,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C75C652D3FD3B5003E299A /* swiftui-loop-videoplayer in Frameworks */,
+				78C75C6A2D3FFD24003E299A /* swiftui-loop-videoplayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +429,7 @@
 			);
 			name = "swiftui-loop-videoplayer-example";
 			packageProductDependencies = (
-				78C75C642D3FD3B5003E299A /* swiftui-loop-videoplayer */,
+				78C75C692D3FFD24003E299A /* swiftui-loop-videoplayer */,
 			);
 			productName = "swiftui-loop-videoplayer-example";
 			productReference = 78AF7BE82A52A9DA0028E9E3 /* swiftui-loop-videoplayer-example.app */;
@@ -465,7 +465,7 @@
 			);
 			mainGroup = 78AF7BDF2A52A9DA0028E9E3;
 			packageReferences = (
-				78C75C632D3FD16D003E299A /* XCLocalSwiftPackageReference "../swiftui-loop-videoplayer" */,
+				78C75C682D3FFD0B003E299A /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */,
 			);
 			productRefGroup = 78AF7BE92A52A9DA0028E9E3 /* Products */;
 			projectDirPath = "";
@@ -856,17 +856,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		78C75C632D3FD16D003E299A /* XCLocalSwiftPackageReference "../swiftui-loop-videoplayer" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../swiftui-loop-videoplayer";
+/* Begin XCRemoteSwiftPackageReference section */
+		78C75C682D3FFD0B003E299A /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftuiux/swiftui-loop-videoplayer";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		78C75C642D3FD3B5003E299A /* swiftui-loop-videoplayer */ = {
+		78C75C692D3FFD24003E299A /* swiftui-loop-videoplayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78C75C632D3FD16D003E299A /* XCLocalSwiftPackageReference "../swiftui-loop-videoplayer" */;
+			package = 78C75C682D3FFD0B003E299A /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;
 			productName = "swiftui-loop-videoplayer";
 		};
 /* End XCSwiftPackageProductDependency section */

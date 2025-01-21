@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		78048F8D2D2EDF2E00B4A348 /* subtitles_eng.vtt in Resources */ = {isa = PBXBuildFile; fileRef = 78048F8C2D2EDF2E00B4A348 /* subtitles_eng.vtt */; };
-		7804B5FF2D3826E0000D6136 /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 7804B5FE2D3826E0000D6136 /* swiftui-loop-videoplayer */; };
 		7810A3D52A7CE3570032340D /* tip_video_swiftui.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7810A3D42A7CE3570032340D /* tip_video_swiftui.gif */; };
 		7816ADFC2C91A140008179BA /* swiftui_video_player.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7816ADFB2C91A140008179BA /* swiftui_video_player.gif */; };
 		7816ADFF2C9337EA008179BA /* ButtonsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7816ADFE2C9337EA008179BA /* ButtonsBuilder.swift */; };
@@ -51,7 +50,6 @@
 		788D66212A5B1B7B0047A134 /* swiftui_video_hint.gif in Resources */ = {isa = PBXBuildFile; fileRef = 788D66202A5B1B7B0047A134 /* swiftui_video_hint.gif */; };
 		7892F7342C6BDFE600B7A3B5 /* rotate.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7892F7332C6BDFE600B7A3B5 /* rotate.gif */; };
 		7892F7382C6CA80800B7A3B5 /* rotate_around_edge.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7892F7372C6CA80800B7A3B5 /* rotate_around_edge.gif */; };
-		78A2F66D2C95EA2200D2BF05 /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 78A2F66C2C95EA2200D2BF05 /* swiftui-loop-videoplayer */; };
 		78ABCBFB2C870C670083884B /* Video8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6722C6E1CE1002833B3 /* Video8.swift */; };
 		78ABCBFC2C870C690083884B /* Video6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B3E2C6668F0007E26CD /* Video6.swift */; };
 		78ABCBFD2C870C6C0083884B /* Video1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6742C6E2C13002833B3 /* Video1.swift */; };
@@ -79,6 +77,7 @@
 		78AF7BFD2A52AA5D0028E9E3 /* swipe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78AF7BFC2A52AA5D0028E9E3 /* swipe.mp4 */; };
 		78AF7C072A52BFBB0028E9E3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 78AF7C062A52BFBB0028E9E3 /* README.md */; };
 		78B42EF32C529785005E2367 /* macos.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78B42EF22C529785005E2367 /* macos.gif */; };
+		78C75C652D3FD3B5003E299A /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 78C75C642D3FD3B5003E299A /* swiftui-loop-videoplayer */; };
 		78D7B6732C6E1CE1002833B3 /* Video8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6722C6E1CE1002833B3 /* Video8.swift */; };
 		78D7B6752C6E2C13002833B3 /* Video1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6742C6E2C13002833B3 /* Video1.swift */; };
 		78F87B3F2C6668F0007E26CD /* Video6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B3E2C6668F0007E26CD /* Video6.swift */; };
@@ -164,7 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7804B5FF2D3826E0000D6136 /* swiftui-loop-videoplayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A2F66D2C95EA2200D2BF05 /* swiftui-loop-videoplayer in Frameworks */,
+				78C75C652D3FD3B5003E299A /* swiftui-loop-videoplayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +410,6 @@
 			);
 			name = VideoPlayerUITests;
 			packageProductDependencies = (
-				7804B5FE2D3826E0000D6136 /* swiftui-loop-videoplayer */,
 			);
 			productName = VideoPlayerUITests;
 			productReference = 7876EDD52C80AFBA0084DC8C /* VideoPlayerUITests.xctest */;
@@ -432,7 +429,7 @@
 			);
 			name = "swiftui-loop-videoplayer-example";
 			packageProductDependencies = (
-				78A2F66C2C95EA2200D2BF05 /* swiftui-loop-videoplayer */,
+				78C75C642D3FD3B5003E299A /* swiftui-loop-videoplayer */,
 			);
 			productName = "swiftui-loop-videoplayer-example";
 			productReference = 78AF7BE82A52A9DA0028E9E3 /* swiftui-loop-videoplayer-example.app */;
@@ -468,7 +465,7 @@
 			);
 			mainGroup = 78AF7BDF2A52A9DA0028E9E3;
 			packageReferences = (
-				78A2F66B2C95EA1300D2BF05 /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */,
+				78C75C632D3FD16D003E299A /* XCLocalSwiftPackageReference "../swiftui-loop-videoplayer" */,
 			);
 			productRefGroup = 78AF7BE92A52A9DA0028E9E3 /* Products */;
 			projectDirPath = "";
@@ -859,26 +856,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		78A2F66B2C95EA1300D2BF05 /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/swiftuiux/swiftui-loop-videoplayer";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		78C75C632D3FD16D003E299A /* XCLocalSwiftPackageReference "../swiftui-loop-videoplayer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../swiftui-loop-videoplayer";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7804B5FE2D3826E0000D6136 /* swiftui-loop-videoplayer */ = {
+		78C75C642D3FD3B5003E299A /* swiftui-loop-videoplayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78A2F66B2C95EA1300D2BF05 /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;
-			productName = "swiftui-loop-videoplayer";
-		};
-		78A2F66C2C95EA2200D2BF05 /* swiftui-loop-videoplayer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 78A2F66B2C95EA1300D2BF05 /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;
+			package = 78C75C632D3FD16D003E299A /* XCLocalSwiftPackageReference "../swiftui-loop-videoplayer" */;
 			productName = "swiftui-loop-videoplayer";
 		};
 /* End XCSwiftPackageProductDependency section */

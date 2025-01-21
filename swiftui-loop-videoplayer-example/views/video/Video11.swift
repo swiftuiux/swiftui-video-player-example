@@ -8,61 +8,113 @@
 import SwiftUI
 import swiftui_loop_videoplayer
 
-struct Video11 : VideoTpl{
+struct Video11: VideoTpl {
+    // MARK: - State
     
-    @State public var playbackCommand: PlaybackCommand = .idle
+    @State private var playbackCommand: PlaybackCommand = .idle
+    @State private var stoppedPiP: Bool = false
+    @State private var loopCount: Int = 1
+
+    // MARK: - Static Properties
     
-    static public let videoPrefix : String = "Video11"
+    static let videoPrefix: String = "Video11"
     
-    static public var videoPlayerIdentifier : String {
+    static var videoPlayerIdentifier: String {
         "\(videoPrefix)_ExtVideoPlayer"
     }
     
-    static public var loopCounterIdentifier : String {
+    static var loopCounterIdentifier: String {
         "\(videoPrefix)_LoopCounter"
     }
     
-    let fileName : String = "swipe"
+    // MARK: - Constants
     
-    @State var loopCount : Int = 1
+    private let fileName: String = "swipe"
+
+    // MARK: - Body
     
-    var body: some View{
-            ZStack{
-                ExtVideoPlayer(settings: .constant(getSettings()), command: $playbackCommand)
-                .onPlayerEventChange { events in
-                    print(events)
-                    let count = events.filter {
-                        if case .currentItemChanged(_) = $0 {
-                            return true
-                        } else {
-                            return false
-                        }
-                    }.count
-                    loopCount += count
-                }
-                .accessibilityIdentifier(Video11.videoPlayerIdentifier)
-                .task{
-                      try? await Task.sleep(for: .seconds(0.5))
-                      playbackCommand = .play
-                }
-                Text("Loop count \(loopCount)")
-                    .padding()
-                    .background(Color.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .accessibilityIdentifier(Video11.loopCounterIdentifier)
-            }.ignoresSafeArea()
-            .background(Color("app_blue"))
+    var body: some View {
+        ZStack {
+            // Main Video Player
+            ExtVideoPlayer(settings: .constant(videoSettings),
+                           command: $playbackCommand)
+                .onPlayerEventChange(perform: handlePlayerEvents)
+                .task{ await handlePiPStart(delay: true) }
+                .accessibilityIdentifier(Self.videoPlayerIdentifier)
+            overlayView
+        }
+        .ignoresSafeArea()
+        .background(Color("app_blue"))
     }
 }
 
-// MARK: - Fileprivate
-
-fileprivate func getSettings() -> VideoSettings{
-    VideoSettings{
-        SourceName("swipe")
-        Ext("mp4")
-        Gravity(.resizeAspectFill)
-        Loop()
-        NotAutoPlay()
+// MARK: - Private Helpers
+private extension Video11 {
+    /// Video player settings wrapped in a computed property for clarity.
+    var videoSettings: VideoSettings {
+        VideoSettings {
+            SourceName(fileName)
+            Ext("mp4")
+            Gravity(.resizeAspectFill)
+            Loop()
+            PictureInPicture()
+        }
+    }
+    
+    /// Asynchronously trigger PiP after a short delay (mimicking your existing logic).
+    @Sendable
+    func handlePiPStart(delay : Bool = false) async {
+            if delay{
+                try? await Task.sleep(for: .seconds(0.5))
+            }
+            playbackCommand = .startPiP
+            stoppedPiP = false
+            
+            try? await Task.sleep(for: .seconds(0.1))
+            playbackCommand = .idle
+    }
+    
+    /// Handles all events from the player.
+    func handlePlayerEvents(_ events: [PlayerEvent]) {
+        for event in events {
+            switch event {
+            case .currentItemChanged:
+                // Increase loop count whenever the item changes
+                loopCount += 1
+                
+            case .stoppedPiP:
+                // Mark that PiP has stopped
+                stoppedPiP = true
+                
+            default:
+                break
+            }
+        }
+    }
+    
+    /// Creates the overlay views on top of the video.
+    @ViewBuilder
+    var overlayView: some View {
+        VStack {
+            Text("Loop count \(loopCount)")
+                .padding()
+                .frame(width: 150)
+                .background(Color.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .accessibilityIdentifier(Self.loopCounterIdentifier)
+            
+            Text("PiP start")
+                .padding()
+                .frame(width: 150)
+                .background(Color.orange)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                // Show this button only when PiP has stopped
+                .opacity(stoppedPiP ? 1 : 0)
+                .onTapGesture{
+                    Task{
+                        await handlePiPStart()
+                    }
+                }
+        }
     }
 }

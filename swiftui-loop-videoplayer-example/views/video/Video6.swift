@@ -87,7 +87,6 @@ struct Video6: VideoTpl {
     private func onPlayerEventChange(events: [PlayerEvent]){
         events.forEach {
             if case .boundsChanged(let rect) = $0{
-                print(rect, "rect")
                 // Send boundsChanged event to the throttle mechanism
                 boundsChangeSubject.send(rect)
             }
@@ -100,7 +99,8 @@ struct Video6: VideoTpl {
         boundsChangeSubject
             .throttle(for: .milliseconds(500), scheduler: DispatchQueue.main, latest: true)
             .sink { rect in
-                print(rect)
+                print("View bounds updated: ", rect)
+                /// Hear you can update the vector layer according the new bounds
             }
             .store(in: &cancellables)
     }

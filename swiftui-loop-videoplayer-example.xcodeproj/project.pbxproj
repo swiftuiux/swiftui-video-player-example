@@ -81,6 +81,7 @@
 		78C75C6C2D3FFF7F003E299A /* PiP_support.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78C75C6B2D3FFF7F003E299A /* PiP_support.gif */; };
 		78D7B6732C6E1CE1002833B3 /* Video8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6722C6E1CE1002833B3 /* Video8.swift */; };
 		78D7B6752C6E2C13002833B3 /* Video1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B6742C6E2C13002833B3 /* Video1.swift */; };
+		78E356C02D550A8000F7DECF /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E356BF2D550A8000F7DECF /* swiftui-loop-videoplayer */; };
 		78F87B3F2C6668F0007E26CD /* Video6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B3E2C6668F0007E26CD /* Video6.swift */; };
 		78F87B452C6743AD007E26CD /* video_filters.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78F87B442C6743AC007E26CD /* video_filters.gif */; };
 		78F87B4A2C6B484D007E26CD /* ArtFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B492C6B484D007E26CD /* ArtFilter.swift */; };
@@ -165,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E356C02D550A8000F7DECF /* swiftui-loop-videoplayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +415,7 @@
 			);
 			name = VideoPlayerUITests;
 			packageProductDependencies = (
+				78E356BF2D550A8000F7DECF /* swiftui-loop-videoplayer */,
 			);
 			productName = VideoPlayerUITests;
 			productReference = 7876EDD52C80AFBA0084DC8C /* VideoPlayerUITests.xctest */;
@@ -873,6 +876,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		78C75C692D3FFD24003E299A /* swiftui-loop-videoplayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78C75C682D3FFD0B003E299A /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;
+			productName = "swiftui-loop-videoplayer";
+		};
+		78E356BF2D550A8000F7DECF /* swiftui-loop-videoplayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 78C75C682D3FFD0B003E299A /* XCRemoteSwiftPackageReference "swiftui-loop-videoplayer" */;
 			productName = "swiftui-loop-videoplayer";

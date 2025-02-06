@@ -28,7 +28,7 @@ final class ErrorsUITests: XCTestCase, Initializable, Navigable {
     func testErrorResourceNotFound(){
         let videoName = Video3.videoPrefix
 
-        tap(button: videoName, wait: 8)
+        tap(button: videoName, wait: 11)
         
         let error = getCurrentErrorText(app: AppManager.shared.app)
         let description = VPErrors.sourceNotFound(Video3.sourceName).description

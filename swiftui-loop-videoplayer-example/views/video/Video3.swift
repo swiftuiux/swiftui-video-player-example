@@ -38,6 +38,7 @@ struct Video3 : VideoTpl{
             }
             .accessibilityIdentifier(Video3.videoPlayerIdentifier)
             .onPlayerEventChange { events in
+                print(events)
                 events.forEach { item in
                     if case .error(let e) = item {
                         withAnimation(.spring){

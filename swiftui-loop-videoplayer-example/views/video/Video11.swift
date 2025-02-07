@@ -64,14 +64,14 @@ private extension Video11 {
     /// Asynchronously trigger PiP after a short delay (mimicking your existing logic).
     @Sendable
     func handlePiPStart(delay : Bool = false) async {
-            if delay{
-                try? await Task.sleep(for: .seconds(0.5))
-            }
+            if delay{ try? await Task.sleep(for: .seconds(0.5)) }
+        
             playbackCommand = .startPiP
-            stoppedPiP = false
             
-            try? await Task.sleep(for: .seconds(0.1))
-            playbackCommand = .idle
+            Task{ @MainActor in
+                playbackCommand = .idle
+                stoppedPiP = false
+            }
     }
     
     /// Handles all events from the player.

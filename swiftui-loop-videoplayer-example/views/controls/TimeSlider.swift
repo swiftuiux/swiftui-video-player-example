@@ -25,12 +25,13 @@ struct TimeSlider: View {
     @ViewBuilder
     private var sliderTpl: some View{
         HStack {
-            Text(formatTime(currentTime))
-                .padding(.leading, 15)
-            Slider(value: $currentTime, in: 0...duration, onEditingChanged: onEditingChanged)
-                .disabled(duration == 0 || isSeeking == true)
-            Text(formatTime(duration))
-                .padding(.trailing, 15)
+            let max = duration > 0 ? duration : 0
+                Text(formatTime(currentTime))
+                    .padding(.leading, 15)
+                Slider(value: $currentTime, in: 0...max, onEditingChanged: onEditingChanged)
+                    .disabled(duration == 0 || isSeeking == true)
+                Text(formatTime(duration))
+                    .padding(.trailing, 15)
         }.padding(5)
          .background(RoundedRectangle(cornerRadius: 50).fill(.gray.opacity(0.75)))
          .padding(.horizontal)
@@ -55,6 +56,8 @@ struct TimeSlider: View {
 }
 
 fileprivate func formatTime(_ time: Double) -> String {
+    guard !time.isNaN else { return "0:00" } // Return a default value if time is NaN
+    
     let minutes = Int(time) / 60
     let seconds = Int(time) % 60
     return String(format: "%d:%02d", minutes, seconds)

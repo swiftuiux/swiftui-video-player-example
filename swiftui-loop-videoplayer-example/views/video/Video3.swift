@@ -34,6 +34,7 @@ struct Video3 : VideoTpl{
                 VideoSettings{
                     SourceName(Video3.sourceName)
                     Loop()
+                    Events([.all])
                 }
             }
             .accessibilityIdentifier(Video3.videoPlayerIdentifier)

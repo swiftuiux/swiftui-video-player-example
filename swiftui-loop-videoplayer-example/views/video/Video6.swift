@@ -33,6 +33,7 @@ struct Video6: VideoTpl {
             Mute()
             EnableVector()
             Gravity(.resizeAspectFill)
+            Events([.all])
         }
         self._settings = State(initialValue: settings)
         
@@ -85,6 +86,7 @@ struct Video6: VideoTpl {
     }
     
     private func onPlayerEventChange(events: [PlayerEvent]){
+        print(events)
         events.forEach {
             if case .boundsChanged(let rect) = $0{
                 // Send boundsChanged event to the throttle mechanism

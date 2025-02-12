@@ -58,6 +58,7 @@ private extension Video11 {
             Gravity(.resizeAspectFill)
             Loop()
             PictureInPicture()
+            Events([.all])
         }
     }
     
@@ -76,6 +77,7 @@ private extension Video11 {
     
     /// Handles all events from the player.
     func handlePlayerEvents(_ events: [PlayerEvent]) {
+        print(events)
         for event in events {
             switch event {
             case .currentItemChanged:

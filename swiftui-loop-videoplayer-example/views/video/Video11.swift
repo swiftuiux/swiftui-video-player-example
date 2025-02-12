@@ -52,7 +52,7 @@ struct Video11: VideoTpl {
 private extension Video11 {
     /// Video player settings wrapped in a computed property for clarity.
     var videoSettings: VideoSettings {
-        VideoSettings {
+        .init {
             SourceName(fileName)
             Ext("mp4")
             Gravity(.resizeAspectFill)
@@ -82,17 +82,17 @@ private extension Video11 {
         print(events)
         for event in events {
             switch event {
-            case .currentItemChanged:
-                // Increase loop count whenever the item changes
-                loopCount += 1
-                
-            case .stoppedPiP:
-                // Mark that PiP has stopped
-                stoppedPiP = true
-                
-            default:
-                break
-            }
+                case .currentItemChanged:
+                    // Increase loop count whenever the item changes
+                    loopCount += 1
+                    
+                case .stoppedPiP:
+                    // Mark that PiP has stopped
+                    stoppedPiP = true
+                    
+                default:
+                    break
+                }
         }
     }
     

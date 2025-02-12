@@ -58,7 +58,7 @@ private extension Video11 {
             Gravity(.resizeAspectFill)
             Loop()
             PictureInPicture()
-            Events([.all])
+            Events([.currentItemChangedAny, .stoppedPiP, .startedPiP])
         }
     }
     
@@ -71,7 +71,9 @@ private extension Video11 {
             
             Task{ @MainActor in
                 playbackCommand = .idle
-                stoppedPiP = false
+                Task{ @MainActor in
+                    stoppedPiP = false
+                }
             }
     }
     

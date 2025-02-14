@@ -33,7 +33,7 @@ struct Video6: VideoTpl {
             Mute()
             EnableVector()
             Gravity(.resizeAspectFill)
-            Events([.all])
+            Events([])
         }
         self._settings = State(initialValue: settings)
         

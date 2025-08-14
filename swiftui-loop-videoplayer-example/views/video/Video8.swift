@@ -111,6 +111,6 @@ fileprivate func getSettings(for name: String) -> VideoSettings{
         TimePublishing()
         NotAutoPlay()
         Mute()
-        Events([.durationAny, .itemStatusChangedAny])
+        Events([.durationAny, .itemStatusChangedAny, .seekAny])
     }
 }

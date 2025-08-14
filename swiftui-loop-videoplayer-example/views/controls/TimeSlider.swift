@@ -47,6 +47,7 @@ struct TimeSlider: View {
     
     private func seekToTime(_ time: Double) {
         let command: PlaybackCommand  = .seek(to: time)
+        
         if playbackCommand != command{
             playbackCommand = command
         }else{

@@ -13,7 +13,7 @@ struct Video11: VideoTpl {
     
     @State private var playbackCommand: PlaybackCommand = .idle
     @State private var stoppedPiP: Bool = false
-    @State private var loopCount: Int = 1
+    @State private var loopCount: Int = -1
 
     // MARK: - Static Properties
     
@@ -45,6 +45,7 @@ struct Video11: VideoTpl {
         }
         .ignoresSafeArea()
         .background(Color("app_blue"))
+        .onAppear{ if loopCount == -1 { loopCount = 0 } }
     }
 }
 

@@ -42,10 +42,13 @@ struct FiltersPicker: View {
 
         if filter.0 == "None" {
             playbackCommand = .removeAllFilters
+        } else if filter.0 == "Glow" {
+            let filter = GlowFilter()
+            playbackCommand = .filter(filter, clear: true)
         } else if let filter = CIFilter(name: filter.0, parameters: filter.1) {
             playbackCommand = .filter(filter, clear: true)
         } else {
-            let filter = ArtFilter()
+            let filter = MetallArtFilter()
             playbackCommand = .filter(filter, clear: true)
         }
     }
@@ -56,6 +59,7 @@ struct FiltersPicker: View {
 // Define the filters with their names and parameters
 fileprivate let filters = [
     ("None", [String: Any]()),
+    ("METAL SHADER", [String: Any]()),
     ("Glow", [String: Any]()),
     ("CISepiaTone", [kCIInputIntensityKey: 0.8]),
     ("CIColorMonochrome", [kCIInputColorKey: CIColor(color: .gray), kCIInputIntensityKey: 1.0]),

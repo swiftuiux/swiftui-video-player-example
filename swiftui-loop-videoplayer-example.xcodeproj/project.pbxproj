@@ -38,9 +38,14 @@
 		7816AE2E2C942A57008179BA /* ButtonsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7816ADFE2C9337EA008179BA /* ButtonsBuilder.swift */; };
 		7816AE352C943842008179BA /* MeasureWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7816AE342C943842008179BA /* MeasureWidth.swift */; };
 		7816AE362C94388E008179BA /* MeasureWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7816AE342C943842008179BA /* MeasureWidth.swift */; };
+		78200D5B2E574F7C003A056E /* default.sim.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 78200D5A2E574F7C003A056E /* default.sim.metallib */; };
+		78200D5C2E574F7C003A056E /* default.ios.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 78200D592E574F7C003A056E /* default.ios.metallib */; };
 		78446B912C820FF0003CF3F1 /* VideoPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78446B902C820FF0003CF3F1 /* VideoPlayerModel.swift */; };
 		78446BA02C821C9E003CF3F1 /* VideoPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78446B902C820FF0003CF3F1 /* VideoPlayerModel.swift */; };
 		784A16232A58374B00E8BBEA /* swiftui.gif in Resources */ = {isa = PBXBuildFile; fileRef = 784A16222A58374B00E8BBEA /* swiftui.gif */; };
+		78623E582E5869D800AB63FE /* GlowFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78623E572E5869CF00AB63FE /* GlowFilter.swift */; };
+		78623E592E5869D800AB63FE /* GlowFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78623E572E5869CF00AB63FE /* GlowFilter.swift */; };
+		78623E5B2E588B5000AB63FE /* build_shaders.sh in Resources */ = {isa = PBXBuildFile; fileRef = 78623E5A2E588B5000AB63FE /* build_shaders.sh */; };
 		786795EB2CF5CC0400352F7A /* cornerRadius.png in Resources */ = {isa = PBXBuildFile; fileRef = 786795EA2CF5CC0400352F7A /* cornerRadius.png */; };
 		7876EDE12C80B0590084DC8C /* Video11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EDE02C80B0590084DC8C /* Video11.swift */; };
 		7876EDE32C80B09D0084DC8C /* Video2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EDE22C80B09D0084DC8C /* Video2.swift */; };
@@ -58,7 +63,7 @@
 		78ABCC002C870C740083884B /* Video3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EDE42C80B0D00084DC8C /* Video3.swift */; };
 		78ABCC022C870CA00083884B /* ResponsiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EDE72C80B1310084DC8C /* ResponsiveStack.swift */; };
 		78ABCC032C870CAC0083884B /* VectorLogoLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B5E2C6BB28C007E26CD /* VectorLogoLayer.swift */; };
-		78ABCC042C870CB00083884B /* ArtFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B492C6B484D007E26CD /* ArtFilter.swift */; };
+		78ABCC042C870CB00083884B /* MetallArtFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B492C6B484D007E26CD /* MetallArtFilter.swift */; };
 		78ABCC062C87298B0083884B /* LoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABCC052C87298B0083884B /* LoopUITests.swift */; };
 		78ABCC082C883B730083884B /* ErrorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABCC072C883B730083884B /* ErrorsUITests.swift */; };
 		78ABCC0B2C88482C0083884B /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABCC0A2C88482C0083884B /* AppManager.swift */; };
@@ -84,7 +89,7 @@
 		78E356C02D550A8000F7DECF /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 78E356BF2D550A8000F7DECF /* swiftui-loop-videoplayer */; };
 		78F87B3F2C6668F0007E26CD /* Video6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B3E2C6668F0007E26CD /* Video6.swift */; };
 		78F87B452C6743AD007E26CD /* video_filters.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78F87B442C6743AC007E26CD /* video_filters.gif */; };
-		78F87B4A2C6B484D007E26CD /* ArtFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B492C6B484D007E26CD /* ArtFilter.swift */; };
+		78F87B4A2C6B484D007E26CD /* MetallArtFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B492C6B484D007E26CD /* MetallArtFilter.swift */; };
 		78F87B512C6B4D69007E26CD /* apple_logo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78F87B502C6B4D69007E26CD /* apple_logo.mp4 */; };
 		78F87B602C6BB28C007E26CD /* VectorLogoLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F87B5E2C6BB28C007E26CD /* VectorLogoLayer.swift */; };
 		78F87B642C6BB689007E26CD /* vector.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78F87B632C6BB689007E26CD /* vector.gif */; };
@@ -118,8 +123,13 @@
 		7816AE182C93473E008179BA /* TimeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlider.swift; sourceTree = "<group>"; };
 		7816AE1A2C93503E008179BA /* VideoURLPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLPicker.swift; sourceTree = "<group>"; };
 		7816AE342C943842008179BA /* MeasureWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureWidth.swift; sourceTree = "<group>"; };
+		78200D562E574621003A056E /* ArtFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ArtFilter.metal; sourceTree = "<group>"; };
+		78200D592E574F7C003A056E /* default.ios.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = default.ios.metallib; sourceTree = "<group>"; };
+		78200D5A2E574F7C003A056E /* default.sim.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = default.sim.metallib; sourceTree = "<group>"; };
 		78446B902C820FF0003CF3F1 /* VideoPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerModel.swift; sourceTree = "<group>"; };
 		784A16222A58374B00E8BBEA /* swiftui.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = swiftui.gif; sourceTree = "<group>"; };
+		78623E572E5869CF00AB63FE /* GlowFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowFilter.swift; sourceTree = "<group>"; };
+		78623E5A2E588B5000AB63FE /* build_shaders.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_shaders.sh; sourceTree = "<group>"; };
 		786795EA2CF5CC0400352F7A /* cornerRadius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cornerRadius.png; sourceTree = "<group>"; };
 		786A7B9A2C60C77800018844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7876EDD52C80AFBA0084DC8C /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +165,7 @@
 		78D7B6742C6E2C13002833B3 /* Video1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video1.swift; sourceTree = "<group>"; };
 		78F87B3E2C6668F0007E26CD /* Video6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video6.swift; sourceTree = "<group>"; };
 		78F87B442C6743AC007E26CD /* video_filters.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = video_filters.gif; sourceTree = "<group>"; };
-		78F87B492C6B484D007E26CD /* ArtFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtFilter.swift; sourceTree = "<group>"; };
+		78F87B492C6B484D007E26CD /* MetallArtFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallArtFilter.swift; sourceTree = "<group>"; };
 		78F87B502C6B4D69007E26CD /* apple_logo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = apple_logo.mp4; sourceTree = "<group>"; };
 		78F87B5E2C6BB28C007E26CD /* VectorLogoLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorLogoLayer.swift; sourceTree = "<group>"; };
 		78F87B632C6BB689007E26CD /* vector.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = vector.gif; sourceTree = "<group>"; };
@@ -221,6 +231,14 @@
 				7816AE342C943842008179BA /* MeasureWidth.swift */,
 			);
 			path = modifier;
+			sourceTree = "<group>";
+		};
+		78200D552E574600003A056E /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				78200D562E574621003A056E /* ArtFilter.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 		78446B8F2C820FD6003CF3F1 /* model */ = {
@@ -309,6 +327,8 @@
 		78AF7BEA2A52A9DA0028E9E3 /* swiftui-loop-videoplayer-example */ = {
 			isa = PBXGroup;
 			children = (
+				78623E5A2E588B5000AB63FE /* build_shaders.sh */,
+				78200D552E574600003A056E /* Shaders */,
 				7816AE332C94382B008179BA /* modifier */,
 				7816AE152C93459E008179BA /* viewModel */,
 				7816ADFD2C9337D5008179BA /* utils */,
@@ -339,6 +359,8 @@
 		78AF7BFB2A52AA5D0028E9E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				78200D592E574F7C003A056E /* default.ios.metallib */,
+				78200D5A2E574F7C003A056E /* default.sim.metallib */,
 				78048F8C2D2EDF2E00B4A348 /* subtitles_eng.vtt */,
 				78F87B502C6B4D69007E26CD /* apple_logo.mp4 */,
 				78AF7BFC2A52AA5D0028E9E3 /* swipe.mp4 */,
@@ -374,7 +396,8 @@
 		78F87B482C6B4836007E26CD /* filters */ = {
 			isa = PBXGroup;
 			children = (
-				78F87B492C6B484D007E26CD /* ArtFilter.swift */,
+				78623E572E5869CF00AB63FE /* GlowFilter.swift */,
+				78F87B492C6B484D007E26CD /* MetallArtFilter.swift */,
 			);
 			path = filters;
 			sourceTree = "<group>";
@@ -503,12 +526,15 @@
 				78AF7BF32A52A9DB0028E9E3 /* Preview Assets.xcassets in Resources */,
 				7892F7382C6CA80800B7A3B5 /* rotate_around_edge.gif in Resources */,
 				7892F7342C6BDFE600B7A3B5 /* rotate.gif in Resources */,
+				78623E5B2E588B5000AB63FE /* build_shaders.sh in Resources */,
 				78AF7BFD2A52AA5D0028E9E3 /* swipe.mp4 in Resources */,
 				78048F8D2D2EDF2E00B4A348 /* subtitles_eng.vtt in Resources */,
 				78AF7C072A52BFBB0028E9E3 /* README.md in Resources */,
 				7816ADFC2C91A140008179BA /* swiftui_video_player.gif in Resources */,
 				78F87B642C6BB689007E26CD /* vector.gif in Resources */,
 				7810A3D52A7CE3570032340D /* tip_video_swiftui.gif in Resources */,
+				78200D5B2E574F7C003A056E /* default.sim.metallib in Resources */,
+				78200D5C2E574F7C003A056E /* default.ios.metallib in Resources */,
 				784A16232A58374B00E8BBEA /* swiftui.gif in Resources */,
 				78F87B452C6743AD007E26CD /* video_filters.gif in Resources */,
 				78AF7BF02A52A9DB0028E9E3 /* Assets.xcassets in Resources */,
@@ -528,6 +554,7 @@
 				78ABCC062C87298B0083884B /* LoopUITests.swift in Sources */,
 				78ABCBFF2C870C720083884B /* Video2.swift in Sources */,
 				78ABCC002C870C740083884B /* Video3.swift in Sources */,
+				78623E582E5869D800AB63FE /* GlowFilter.swift in Sources */,
 				78ABCC172C89A5E50083884B /* Extractor.swift in Sources */,
 				7816AE2E2C942A57008179BA /* ButtonsBuilder.swift in Sources */,
 				78ABCBFC2C870C690083884B /* Video6.swift in Sources */,
@@ -555,7 +582,7 @@
 				78ABCC082C883B730083884B /* ErrorsUITests.swift in Sources */,
 				7876EDEA2C80B69F0084DC8C /* NavigationUITests.swift in Sources */,
 				78ABCC0E2C8848E80083884B /* Initializable.swift in Sources */,
-				78ABCC042C870CB00083884B /* ArtFilter.swift in Sources */,
+				78ABCC042C870CB00083884B /* MetallArtFilter.swift in Sources */,
 				7816AE222C942A19008179BA /* Video8ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +593,7 @@
 			files = (
 				78D7B6732C6E1CE1002833B3 /* Video8.swift in Sources */,
 				78F87B3F2C6668F0007E26CD /* Video6.swift in Sources */,
+				78623E592E5869D800AB63FE /* GlowFilter.swift in Sources */,
 				78D7B6752C6E2C13002833B3 /* Video1.swift in Sources */,
 				7816AE142C934365008179BA /* EndButton.swift in Sources */,
 				7876EDE52C80B0D00084DC8C /* Video3.swift in Sources */,
@@ -589,7 +617,7 @@
 				7816AE172C9345BA008179BA /* Video8ViewModel.swift in Sources */,
 				78F87B602C6BB28C007E26CD /* VectorLogoLayer.swift in Sources */,
 				7816AE0A2C9340FE008179BA /* VectorToggle.swift in Sources */,
-				78F87B4A2C6B484D007E26CD /* ArtFilter.swift in Sources */,
+				78F87B4A2C6B484D007E26CD /* MetallArtFilter.swift in Sources */,
 				7816AE022C933B48008179BA /* BrightnessSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

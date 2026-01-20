@@ -1,14 +1,14 @@
 //
-//  ArtFilter.swift
+//  GlowFilter.swift
 //  swiftui-loop-videoplayer-example
 //
-//  Created by Igor Shelopaev on 13.08.24.
+//  Created by Igor  on 22.08.25.
 //
 
 import Foundation
 import CoreImage
 
-class ArtFilter: CIFilter {
+class GlowFilter: CIFilter {
     @objc dynamic var inputImage: CIImage?
     private var edgeDetectionFilter: CIFilter
     private var bloomFilter: CIFilter
@@ -25,7 +25,7 @@ class ArtFilter: CIFilter {
 
         hueAdjustFilter = CIFilter(name: "CIHueAdjust")!
         hueAdjustFilter.setValue(2.0 * .pi, forKey: "inputAngle")
-        
+
         super.init()
     }
 
